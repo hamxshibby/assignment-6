@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment 6</title>
+ <link rel="stylesheet" type="text/css" href="styles/Assignment6.css"/>
+    <script src="js/assignment6.js"></script>
+</head>
+<body>
+
+ <div id="selectionArea">
+     <h1 id="selectionHeader">Please make a selection from the dropdown box.</h1>
+        <select name="Area Selection" id="userAreaSelection" onchange="showArea()">
+            <option value="0">--</option>
+               <option value="1">Add Customer</option>
+               <option value="2">Edit Shipping Address</option>
+              <option value="3">Delete Customer</option>
+        </select>
+        <hr>
+    </div>
+  <section id="Area1" style="display: none;">
+<h1>Add custttomr</h1>
+      <input type="text" id="custIdInput" placeholder="Customer ID">
+      <br>
+             <input type="text" id="custNameInput" placeholder="Customer Name">
+     <br>
+            <input type="text" id="custCity" placeholder="Customer City">
+    <br>
+          <button id="addCustomerButton" onclick="addCustomertoDB()"> Add the Customer!</button>
+             <br>
+               <hr>
+              <label id="addMessageLabel"></label>
+
+    </section>
+    <section id="Area2" style="display: none;">
+        <h1>Edit shipping information</h1><br>
+                <input type="text" id="shipOrderNum" placeholder="Order Number">
+    <br>
+            <input type="text" id="shipName" placeholder="Ship To Name">
+        <br>
+              <input type="text" id="shipStreetAddress" placeholder="Ship To Street Address">
+              <br>
+                <input type="text" id="shipCity" placeholder="Ship To City">
+            <br>
+                <input type="text" id="shipZip" placeholder="Ship To Postal Code">
+    <br>
+                    <button id="changeShipAddress" onclick="changeShipAddress()">Change the Shipping Address!</button>
+ <br>
+<hr>
+        <label id="changeShipLabel"></label>
+
+    </section>
+    <section id="Area3" style="display: none;">
+        <h1>DELETE DELETE DELETE</h1><br>
+ <input type="text" id="deleteCustID" placeholder="Customer ID"></input>
+                <button id="deleteCustomerButton" onclick="checkIfSure()">Delete Customer</button>
+                <hr>
+    
+    
+     <label id="deleteCustLabel"></label>
+
+    </section>
+    
+</body>
+</html>
